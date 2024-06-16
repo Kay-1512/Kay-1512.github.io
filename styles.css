@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* GLOBAL STYLING */
+
+*{
+    font-family: "Teachers", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* NAV BAR */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+}
+
+.navbar a:hover {
+    color: #f39c12;
+}
+
+a.active {
+    color: #f39c12;
+}
+
+/* HERO */
+
+.hero {
+    margin-top: -60px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #121212, #2c2c2c);
+    background-size: cover;
+    padding-top: 60px;
+    position: relative;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 20px;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    color: #f39c12;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    transition: background 0.3s;
+    padding-bottom: 40px;
+}
+
+.section:nth-child(odd) {
+    background: #1f1f1f;
+}
+
+.section:nth-child(even) {
+    background: #2c2c2c;
+}
+
+
+/* ABOUT */
+
+/* Technologies section styling */
+.technologies {
+    margin-top: 20px;
+}
+
+.technologies h3 {
+    margin: 40px auto;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech-logo {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3c3c3c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.tech-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@keyframes wave {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.tech-logo.wave {
+    animation: wave 0.6s ease-in-out;
+}
+
+/* .tech-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+} */
+
+
+/* PROJECTS */
+
+.project-card {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+    background: #3c3c3c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    padding: 0 10px 10px;
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: scale(1.05); /* Scale up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+}
+
+
+/* CONTACT FORM */
+
+#contact {
+    padding-bottom: 10px;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.contact-form-container label {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contact-form-container input, 
+.contact-form-container textarea {
+    background: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90%;
+    margin-bottom: 18px;
+    margin-top: 9px;
+    margin-left: auto;
+}
+
+.contact-form-container button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.contact-form-container button:hover {
+    background-color: #e67e22;
+}
+
+.spinner {
+    display: none;
+    width: 24;
+    height: 24;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-left-color: #f39c12;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    background: #1f1f1f;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #f39c12;
+}
+
+
+/* SCROLL TO TOP BUTTON */
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #f39c12;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    /* width: 3em; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #e67e22;
+}
